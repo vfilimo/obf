@@ -42,7 +42,7 @@ export default defineConfig(({ command }) => {
       },
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "./src/styles/_variables.scss";`,
+          additionalData: `@import "@/styles/_variables.scss";`,
         },
       },
     },
