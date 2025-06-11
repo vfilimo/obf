@@ -6,7 +6,7 @@ import * as path from 'path';
 export default defineConfig(({ command }) => {
   return {
     plugins: [react(), tsconfigPaths()],
-    base: './',
+    base: '/obf/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
