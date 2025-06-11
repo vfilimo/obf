@@ -1,0 +1,48 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/fonts.scss' as *;
+
+.exchangePage {
+  background: $main-background-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    padding: 32px 40px;
+    flex: 1;
+  }
+
+  &__anyButton {
+    position: absolute;
+    top: 16px;
+    left: 184px;
+    width: 237px;
+    z-index: 1;
+  }
+
+  &__backButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 75px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @include fontSec--gray;
+  }
+
+  &__title {
+    margin-top: 8px;
+    @include fontH2--bold;
+  }
+
+  &__blocks {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+}

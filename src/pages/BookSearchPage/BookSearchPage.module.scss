@@ -1,0 +1,22 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/mixins' as *;
+
+.search-page {
+  background: $main-background-color;
+
+  &__title {
+    margin-top: 32px;
+    padding-inline: 40px;
+
+    @include fontH2--bold;
+  }
+
+  &__main {
+    padding-inline: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    min-height: 100vh;
+    padding-bottom: 100px;
+  }
+}

@@ -1,0 +1,139 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/fonts.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  flex-grow: 1;
+}
+
+.main {
+  display: flex;
+  padding: 32px 40px 0;
+  background: #f7fafc;
+}
+
+.info {
+  width: 100%;
+  margin-right: 40px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.body {
+  margin-top: 32px;
+  display: flex;
+  gap: 32px;
+}
+
+.manager {
+  display: flex;
+  flex-direction: column;
+  width: 776px;
+  gap: 24px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e1e7ef;
+}
+
+.tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  height: 44px;
+  padding-left: 16px;
+  padding-right: 32px;
+  text-decoration: none;
+  @include fontSec--gray;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: $color-blue;
+}
+
+.tabImg {
+  width: 20px;
+  height: 20px;
+}
+
+.count {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fontSec--darkblue;
+  color: $color-blue;
+  background-color: #d6ecfa;
+  border-radius: 50%;
+}
+
+.owner {
+  display: flex;
+  width: 100%;
+}
+
+.ownerContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  @include fontH2;
+}
+
+.location {
+  @include fontMain;
+}
+
+.config {
+  @include fontSmall--gray;
+  color: $color-blue;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-blue--hover;
+  }
+}

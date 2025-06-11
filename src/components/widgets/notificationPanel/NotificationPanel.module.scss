@@ -1,0 +1,85 @@
+@use '../../../styles/fonts.scss' as *;
+@use '../../../styles/mixins' as *;
+
+.panel {
+  width: 552px;
+  height: 378px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.imgBell {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  @include fontH4--semiBold--darkblue;
+}
+
+.list {
+  margin-top: 24px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  background: #f5f7fa;
+  min-height: 89px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.name {
+  color: #2563eb;
+}
+
+.time {
+  color: #7b8a99;
+}
+
+.text,
+.message {
+  font-size: 16px;
+  color: #2d3748;
+}
+
+.statusAwaiting .button {
+  background: $color-white;
+  color: #d48806;
+}
+
+.statusAccepted .button {
+  background: #f6ffed;
+  color: #389e0d;
+}
+
+.statusRejected .button {
+  background: $color-white;
+  color: #cf1322;
+}
+
+.imgBell {
+  width: 20px;
+  height: 20px;
+}
