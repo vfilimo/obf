@@ -38,12 +38,7 @@ export default defineConfig(({ command }) => {
         scopeBehaviour: 'local',
         generateScopedName: '[name]__[local]__[hash:base64:5]',
         localsConvention: 'camelCase',
-        globalModulePaths: [/global\.module\.scss$/], // Якщо є глобальні SCSS-модулі
-      },
-      preprocessorOptions: {
-        scss: {
-          additionalData: `@import "@/styles/_variables.scss";`,
-        },
+        globalModulePaths: [/global\.module\.scss$/],
       },
     },
   };
