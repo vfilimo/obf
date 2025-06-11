@@ -42,8 +42,7 @@ export default defineConfig(({ command }) => {
       },
       preprocessorOptions: {
         scss: {
-          // Додаткові SCSS-змінні, міксини або імпорти
-          additionalData: '@import "./src/styles/_variables.scss";',
+          additionalData: `@import "./src/styles/_variables.scss";`,
         },
       },
     },
